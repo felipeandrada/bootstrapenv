@@ -17,10 +17,10 @@ function bootstrapEnv() {
     
     
     //html template used for future tests
-    var html = "<div class='bootstrap-env-xs visible-xs'></div>\
-    <div class='bootstrap-env-sm visible-sm'></div>\
-    <div class='bootstrap-env-md visible-md'></div>\
-    <div class='bootstrap-env-lg visible-lg'></div>";
+    var html = "<div id='bootstrap-env-xs' class='visible-xs'></div>\
+    <div id='bootstrap-env-sm' class='visible-sm'></div>\
+    <div id='bootstrap-env-md' class='visible-md'></div>\
+    <div id='bootstrap-env-lg' class='visible-lg'></div>";
     
     //append tester to end of document
     $('body').append(html);
@@ -41,16 +41,16 @@ function bootstrapEnvCheck() {
     //new environment
     var env;
     
-    if($('.bootstrap-env-xs').is(':visible')){
+    if($('#bootstrap-env-xs').is(':visible')){
         env = 'xs'; //phones
     } else
-    if($('.bootstrap-env-sm').is(':visible')){
+    if($('#bootstrap-env-sm').is(':visible')){
         env = 'sm'; //tables
     } else
-    if($('.bootstrap-env-md').is(':visible')){
+    if($('#bootstrap-env-md').is(':visible')){
         env = 'md'; //desktops
     } else
-    if($('.bootstrap-env-lg').is(':visible')){
+    if($('#bootstrap-env-lg').is(':visible')){
         env = 'lg'; //larger desktops
     }
     
